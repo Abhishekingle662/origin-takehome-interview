@@ -4,7 +4,7 @@
 ---
 
 ## ✉️ Overview
-Welcome 👋 — and thanks for taking the time to complete Origin Speech Therapy’s take-home challenge.  
+Welcome 👋 — and thanks for taking the time to complete Origin Therapy’s take-home challenge.  
 This exercise mirrors real full-stack work at **Origin**: connecting clean backend APIs to polished, type-safe UIs.
 
 You’ll build a small **Therapist Session Dashboard** using **Next.js**, **TypeScript**, and a provided **Neon Postgres** database.
