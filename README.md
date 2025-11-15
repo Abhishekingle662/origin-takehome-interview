@@ -106,6 +106,35 @@ Email your submission to **ni@joinoriginspeech.com**.
 
 ---
 
+## Design Choices
+
+### How I Approached the Problem
+1. First of all, I thought it would be best to use the current Origin Speech color palette to show coherence between the website and the dashboard. So, I added the Origin Speech icon and used brand colors.
+2. Instead of a plain dashboard, I made it a dedicated page with a clear header and branding, so users know what it’s about before seeing the sessions.
+3. The design is fully desktop and mobile responsive for accessibility and usability.
+4. Adding a child image was a good final touch to boost the design and make it feel more friendly and relevant to the company mission.
+
+- **Database Layer**: Used Prisma ORM for type-safe database operations with Neon PostgreSQL
+- **API Layer**: Built RESTful endpoints following Next.js 13+ App Router conventions with proper error handling
+- **Frontend**: Created a responsive table-based dashboard with real-time data fetching and optimistic updates
+- **Styling**: Used TailwindCSS for consistent, mobile-first design with clean gray/green/blue color scheme
+- **Search & Filter**: Added client-side filtering for therapist/patient names and session status
+
+### Trade-offs and Assumptions
+- **Prisma vs Raw SQL**: Chose Prisma for type safety and faster development, though it adds some overhead
+- **Client-side State**: Used React useState instead of a state management library since the app scope is small
+- **Table vs Cards**: Chose table layout for better data density and sorting capabilities
+- **Authentication**: Assumed no authentication needed for this demo (would be required in production)
+
+### What I'd Improve with More Time
+- **Enhanced UX**: Add loading skeletons, toast notifications, and confirmation dialogs for actions
+- **Data Validation**: Implement schema validation with Zod for both frontend and backend
+- **Testing**: Add unit tests (Jest) and integration tests (Playwright)
+- **Accessibility**: Add proper ARIA labels, keyboard navigation, and screen reader support
+- **Advanced Filters**: Date range picker, therapist specialty filter, and saved filter presets
+
+
+
 ## 🗓 Timeline
 Please submit within **24 hours** of receiving your database URL.  
 Need more time? No problem — just ask.

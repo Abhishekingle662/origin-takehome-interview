@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Therapist {
+  id        Int       @id @default(autoincrement())
+  name      String
+  specialty String?
+  sessions  Session[]
+
+  @@map("therapists")
+}
+
+model Patient {
+  id       Int       @id @default(autoincrement())
+  name     String
+  dob      DateTime? @db.Date
+  sessions Session[]
+
+  @@map("patients")
+}
+
+model Session {
+  id           Int        @id @default(autoincrement())
+  therapist_id Int?
+  patient_id   Int?
+  date         DateTime   @db.Timestamp(6)
+  status       String?    @default("Scheduled")
+  patient      Patient?   @relation(fields: [patient_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  therapist    Therapist? @relation(fields: [therapist_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("sessions")
+}
