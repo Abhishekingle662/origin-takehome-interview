@@ -56,8 +56,8 @@ export async function PATCH(
     // Transform the response data
     const transformedSession = {
       id: updatedSession.id,
-      therapistName: updatedSession.therapist.name,
-      patientName: updatedSession.patient.name,
+      therapistName: updatedSession.therapist?.name ?? '',
+      patientName: updatedSession.patient?.name ?? '',
       date: updatedSession.date,
       status: updatedSession.status,
       therapist: updatedSession.therapist,

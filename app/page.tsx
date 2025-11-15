@@ -258,7 +258,7 @@ export default function Home() {
       </header>
 
       <main className="mx-auto max-w-6xl px-6 pb-16 pt-10">
-        <section className="grid gap-10 rounded-[32px] bg-[#E8F0FF] px-8 py-12 shadow-2xl shadow-purple-100 md:grid-cols-2">
+        <section className="grid gap-10 rounded-4xl bg-[#E8F0FF] px-8 py-12 shadow-2xl shadow-purple-100 md:grid-cols-2">
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600">
               Serving Northern Virginia families
@@ -284,7 +284,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="absolute inset-6 rounded-[28px] bg-purple-200 opacity-40 blur-3xl" />
-            <div className="relative h-full min-h-[320px] overflow-hidden rounded-[28px] bg-white shadow-2xl shadow-purple-200">
+            <div className="relative h-full min-h-80 overflow-hidden rounded-[28px] bg-white shadow-2xl shadow-purple-200">
               <div
                 className="h-full w-full bg-cover bg-center"
                 style={{
@@ -326,7 +326,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-12 space-y-6 rounded-[32px] bg-white px-6 py-8 shadow-2xl shadow-purple-100">
+        <section className="mt-12 space-y-6 rounded-4xl bg-white px-6 py-8 shadow-2xl shadow-purple-100">
           <div className="flex flex-col gap-4 border-b border-slate-100 pb-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-purple-500">Sessions</p>

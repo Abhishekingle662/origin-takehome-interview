@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export async function GET() {
   try {
     const sessions = await prisma.session.findMany({
-        
+
       include: {
         therapist: true,
         patient: true,
@@ -19,8 +19,8 @@ export async function GET() {
     // Transform the data to include therapist and patient names at the top level
     const transformedSessions = sessions.map((session) => ({
       id: session.id,
-      therapistName: session.therapist.name,
-      patientName: session.patient.name,
+      therapistName: session.therapist?.name?? '',
+      patientName: session.patient?.name?? '',
       date: session.date,
       status: session.status,
       therapist: session.therapist,
