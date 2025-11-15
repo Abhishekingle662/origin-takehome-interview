@@ -131,7 +131,7 @@ Email your submission to **ni@joinoriginspeech.com**.
 - **Data Validation**: Implement schema validation with Zod for both frontend and backend
 - **Testing**: Add unit tests (Jest) and integration tests (Playwright)
 - **Accessibility**: Add proper ARIA labels, keyboard navigation, and screen reader support
-- **Advanced Filters**: Date range picker, therapist specialty filter, and saved filter presets
+- **Advanced Filters**: Date range picker, therapist specialty filter, and saved filter presets.
 
 
 
